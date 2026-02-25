@@ -7,6 +7,7 @@
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
+  
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@500;600;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
@@ -26,12 +27,13 @@
   <nav>
     <h1 class="logo">My Portfolio</h1>
     <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#contact">Contact</a>
+</div>
   </nav>
 </header>
 
@@ -45,16 +47,16 @@
       </h2>
 
       <p class="hero-subtitle">MSCIT CS & IT | Semester 4</p>
-
+5
       <div class="hero-links">
-        <a href="resume.png.jpeg" target="_blank">My Resume</a>
+        <a href="Yesha_Gohel_Resume.pdf" target="_blank">My Resume</a>
 
       </div>
     </div>
 
     <div class="hero-image">
-      <img src="computer.png.webp" alt="3D Coding Illustration">
-    </div>
+  <img src="computer.png.webp" alt="3D Laptop">
+</div>
 
   </div>
 </section>
@@ -107,8 +109,8 @@
       <span>React</span>
     </div>
 
-    <!-- PYTHON CERTIFICATE CLICK -->
-    <div class="skill-card python" onclick="openPythonCert()">
+    
+    <div class="skill-card python">
       <i class="devicon-python-plain"></i>
       <span>Python</span>
     </div>
@@ -139,28 +141,49 @@
   </div>
 </section>
 
+<!-- ================= CERTIFICATES ================= -->
+<section id="certificates">
+  <h2>Certificates</h2>
+
+  <div class="project-cards">
+    <div class="card">
+      <h3>Python Internship Certificate</h3>
+
+      <a href="python.png.jpeg" target="_blank" download>
+        Download Certificate <i class="fa-solid fa-download"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
 <!-- ================= CONTACT ================= -->
 <section id="contact">
   <h2>Contact Me</h2>
-  <p>Email: <strong>yeshagohel0326@gmail.com</strong></p>
-  <br>
+
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p style="margin-top:25px;">
+    Email: <strong>yeshagohel93@gmail.com</strong>
+  </p>
+
   <div class="hero-links">
-  <a href="https://www.linkedin.com/in/yesha-gohel-528086320" target="_blank">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/yesha-gohel-528086320/" target="_blank">
+      LinkedIn
+    </a>
   </div>
-
 </section>
-
 <!-- ================= FOOTER ================= -->
 <footer>
   <p>Made with ❤️ by Yesha Gohel</p>
 </footer>
 
-<!-- ================= SCRIPT ================= -->
-<script>
-function openPythonCert(){
-  window.open("python.png.jpeg", "_blank");
-}
-</script>
+
 
 </body>
-</html>    
+</html>
