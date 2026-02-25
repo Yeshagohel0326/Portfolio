@@ -133,26 +133,31 @@ nav {
 }
 
 /* HERO IMAGE 3D */
-.hero-image {
-    width: 400px;
-    perspective: 1000px;
+/* ================= HERO 3D LAPTOP ================= */
+.hero-image{
+  width:420px;
+  perspective:1200px;
 }
 
-.hero-image img {
-    width: 100%;
-    transition: transform 0.5s;
-    transform-style: preserve-3d;
+.hero-image img{
+  width:100%;
+  animation: float3d 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 25px 40px rgba(0,255,247,0.45));
 }
 
-.hero-image:hover img {
-    transform: rotateY(20deg) rotateX(10deg) scale(1.05);
+/* 3D floating + rotation */
+@keyframes float3d{
+  0%{
+    transform: rotateY(-18deg) rotateX(8deg) translateY(0);
+  }
+  50%{
+    transform: rotateY(18deg) rotateX(-6deg) translateY(-18px);
+  }
+  100%{
+    transform: rotateY(-18deg) rotateX(8deg) translateY(0);
+  }
 }
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0); }
-}
-
 /* ================= SECTIONS ================= */
 section {
   padding: 120px 20px;
@@ -296,6 +301,23 @@ section h2 {
   box-shadow: 0 0 40px #ff3c78, 0 0 40px #00fff7;
 }
 
+/* CERTIFICATES */
+#certificates .card a{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 22px;
+  border-radius:25px;
+  background:linear-gradient(90deg,#ff3c78,#00fff7);
+  color:black;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+#certificates .card a:hover{
+  transform:scale(1.08);
+}
+
 /* ================= CONTACT ================= */
 #contact p {
   font-size: 20px;
@@ -323,4 +345,72 @@ footer {
   .nav-links a { margin-left: 18px; font-size: 14px; }
   .hero-name { font-size: 38px; }
   .hero-subtitle { font-size: 18px; }
+}
+
+
+
+/* ===== LOADER ===== */
+.loader-box{
+  width:400px;
+  height:200px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.typing{
+  font-family:'Orbitron',sans-serif;
+  font-size:26px;
+  color:#00fff7;
+  border-right:3px solid #00fff7;
+  white-space:nowrap;
+  overflow:hidden;
+  width:0;
+  animation:typing 1s steps(20,end) forwards, blink 0.6s infinite;
+}
+
+@keyframes typing{
+  from{width:0}
+  to{width:260px}
+}
+
+@keyframes blink{
+  50%{border-color:transparent}
+}
+/* ================= CONTACT FORM ================= */
+.contact-form{
+  max-width:500px;
+  margin:0 auto 40px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  padding:14px 18px;
+  border-radius:12px;
+  border:none;
+  outline:none;
+  font-size:15px;
+  font-family:'Poppins',sans-serif;
+}
+
+.contact-form textarea{
+  resize:none;
+}
+
+.contact-form button{
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  font-weight:700;
+  cursor:pointer;
+  background:linear-gradient(90deg,#ff3c78,#00fff7);
+  color:black;
+  transition:0.3s;
+}
+
+.contact-form button:hover{
+  transform:scale(1.05);
 }
